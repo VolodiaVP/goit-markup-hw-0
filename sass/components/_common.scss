@@ -1,7 +1,7 @@
 body {
-  font-family: Roboto, sans-serif;
-  color: var(--primary-text-color);
-  background-color: var(--white-color);
+  font-family: Roboto;
+  color: $primary-text-color;
+  background-color: $white-color;
   letter-spacing: 0.03em;
 }
 
@@ -17,14 +17,21 @@ a {
   padding-right: 15px;
 }
 
-.list {
+%list {
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 0px;
   list-style: none;
 }
 
-/* Скрываемый заголовок */
+%text {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+// Скрываемый заголовок
 .hidden {
   position: absolute;
   width: 1px;
@@ -34,4 +41,36 @@ a {
   padding: 0px;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+// Заголовки секций
+.section-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+}
+
+// Секции
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+//Оформление иконок социальных сетей
+%social-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+%social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
